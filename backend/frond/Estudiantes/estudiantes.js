@@ -54,6 +54,7 @@ function detalles (){
             const especialidad =  padre.getAttribute('especialidad')
             const direccion =  padre.getAttribute('direccion')
             const celular =  padre.getAttribute('celular')
+
             const ingles =  padre.getAttribute('ingles')
             const Ser =  padre.getAttribute('Ser')
             const Review =  padre.getAttribute('Review')
@@ -80,6 +81,12 @@ function detalles (){
             <div id="chart1" class="charts"></div>
             `
             const getOptionCharts1 = () =>{
+                let value1 = ingles*1
+                let value2 = Ser*1
+                let value3 = Review*1
+                let value4 = Skills*1
+                let value5 = Asitencia*1
+
                 return {
                     tooltip: {
                       trigger: 'item'
@@ -106,14 +113,14 @@ function detalles (){
                           }
                         },
                         data: [
-                          { value: 1048, name: 'Search Engine' },
-                          { value: 735, name: 'Direct' },
-                          { value: 580, name: 'Email' },
-                          { value: 484, name: 'Union Ads' },
-                          { value: 300, name: 'Video Ads' },
+                          { value: value1, name: 'Ingles' },
+                          { value: value2, name: 'Ser' },
+                          { value: value3, name: 'Review' },
+                          { value: value4, name: 'Skills' },
+                          { value: value5, name: 'Asistencia' },
                           {
                             // make an record to fill the bottom 50%
-                            value: 1048 + 735 + 580 + 484 + 300,
+                            value: value1 + value2 + value3 + value4 + value5,
                             itemStyle: {
                               // stop the chart from rendering this piece
                               color: 'none',
